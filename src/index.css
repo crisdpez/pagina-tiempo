@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
-  background: #ffffff;
-  color: #000000;
+  background: #fff;
+  color: #000;
+  font-family: Poppins, sans-serif;
 }
 
 .header {
@@ -9,6 +12,7 @@ body {
   text-align: center;
   
 }
+
 .titulo{
   background-color: white;
   display: inline-block;
@@ -16,17 +20,20 @@ body {
   font-weight: bold;
   border: 5px solid black;
 }
+
 .frase{
   padding: 20px;
   text-align: center;
   font-weight: bold;
   background-color: red;
 }
+
 .carrusel{
   padding: 200px;
   text-align: center;
   background-color: #70f000;
 }
+
 .items{
   background: lightgray;
   display: grid;
@@ -37,6 +44,7 @@ body {
   gap : 170px;
   
 }
+
 .item{
   background-color: #bf03e9;
   border-radius: 10% ;
@@ -47,21 +55,23 @@ body {
   grid-template-columns: repeat(3, 1fr);
   background: lightpink;
   height: 350px;
-  align-items: center;
-  justify-items: center;
+  place-items: center center;
 }
+
 .pag{
   background: lightseagreen;
   width: 450px;
   height: 300px;
   border-radius: 10%;
 }
+
 .bottom-app{
   text-align: center;
   height: 100px;
   background: lightgreen;
   margin: 0 auto;
 }
+
 #boton{
   width: 300px;
   height: 100px;
@@ -72,10 +82,12 @@ body {
   color: white;
   cursor: pointer;
 }
+
 .footer{
   background: lightsalmon;
   height: 100px;
 }
+
 .faq{
   height: 700px;
 }
