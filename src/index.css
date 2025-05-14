@@ -11,6 +11,8 @@ body {
   background: #fff;
   color: #2c2c2c;
   font-family: Roboto, sans-serif;
+
+  /* padding: 0 35px; */
 }
 
 a, li{
@@ -29,6 +31,10 @@ a, li{
   justify-content: space-between;
   align-items: center;
   padding:  0.5rem 2rem;
+  position: sticky;
+  right: 0;
+  top: 0;
+
 }
 
 .nav-menu ul{
@@ -50,12 +56,14 @@ a, li{
   color: #fff;
   padding: 0.25rem 0.75rem;
   border-radius: 0.4rem;
+  cursor: pointer;
 }
 
 .nav-menu li:last-child:hover{
   background: transparent;
   border: 2px solid #2128bd;
   color: #2128bd;
+  transition: 0.3s ease;
 }
 
 .slogan{
@@ -81,29 +89,71 @@ span{
   }
 }
 
+.carrusel-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  background: #2128bd;
+  background-image: url("./public/img/wallpaper.jpg");
+}
+
+.carrusel-container .img-wallpaper{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+}
+
 .carrusel{
-  padding: 200px;
-  text-align: center;
-  background-color: #2128bd;
+  overflow: hidden;
+  max-width: 1300px;
+  margin: 0 70px 55px;
 }
 
-/*
-.items{
-  background: lightgray;
-  display: grid;
-  justify-content: space-around;
-  min-height: 800px;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  grid-template-rows: repeat(2, 300px);
-  gap : 170px;
-  
+.card-list .card-item{
+  color: #fff;
+  background:#ffffff4f;
+  backdrop-filter: blur(30px);
+  width: 400px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  border: solid 1px #ffffff7a;
+  z-index: 2;
+
 }
 
-.item{
-  background-color: #bf03e9;
-  border-radius: 10% ;
+.card-list .card-item .img-user{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom:40px;
+  border: solid 3px #fff;
+  padding: 4px;
 }
-*/
+
+.card-list .card-item h2{
+  font-family: Roboto, sans-serif;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+  margin: 5px 0 20px;
+}
+
+.card-list .card-item p{
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  text-align: left;
+  padding-top: 10px;
+}
 
 .functions-container{
   height: 700px;
@@ -124,12 +174,20 @@ span{
   flex-direction: column;
 
   &.info-tittle h2{
-    font-size: 35px;
+    font-size: 60px;
     font-family:"Bricolage Grotesque", sans-serif;
     color:#fff;
     padding: 3rem;
     padding-bottom: 1rem;
   }
+
+  &.info-tittle span{
+    font-size: 80px;
+    font-family:"Bricolage Grotesque", sans-serif;
+    color:#fff;
+    text-decoration:underline #fff 5px; 
+  }
+  
 }
 
 .download{
@@ -148,6 +206,7 @@ span{
     font-family: Roboto, sans-serif;
     font-weight: 800;
     font-size: 18px;
+    cursor: pointer;
   }
 }
 
@@ -172,6 +231,63 @@ span{
   }
 }
 
+.alert-container{
+  height: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.alert-content{
+  background: #2128bd;
+  width: 40%;
+  height: 700px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.alert-info{
+  color:#fff;
+  font-size: 40px;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  padding-top: 450px;
+  padding-left: 3rem;
+  
+}
+
+.alert-tittle{
+  background: #fff;
+  width: 60%;
+  max-height: 700px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-family:"Bricolage Grotesque", sans-serif;
+  font-size: 90px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.alert-info{
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.stroke{
+  -webkit-text-stroke: 1px #2128bd;
+  color: transparent; 
+  margin: 10px 0;
+  transition: color 1.5s ease;
+}
+
+.stroke.relleno{
+  color: #2128bd;
+}
+
 .paginas{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -192,6 +308,7 @@ span{
   height: 100px;
   background: lightgreen;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 /*

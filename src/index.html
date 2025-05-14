@@ -5,9 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Climatik</title>
+  <!--link para el swiper del carrusel-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
   <link rel="stylesheet" href="./index.css">
   <script type="module" src="./index.js"></script>
+  <link rel="icon" href="">
 
   <!-- tipografia -->
 
@@ -39,17 +43,68 @@
   <div class="slogan">
     <p><span>Climatik</span> el clima a un <span>click</span></p>
   </div>
-  <div class="carrusel">
-    <p>Carrusel</p>
+  <div class="carrusel-container swiper">
+
+    <div class="carrusel">
+      <div class="card-list swiper-wrapper">
+        <div class="card-item swiper-slide">
+          <img src="./public/img/review-1.jpg" alt="1" class="img-user">
+          <h2>Luis Muñoz</h2>
+          <p>¡Me encanta esta app! Es súper precisa y siempre me mantiene informado sobre el clima en tiempo real!</p>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="./public/img/review-2.jpg" alt="2" class="img-user">
+          <h2>Laura Flores</h2>
+          <p>La mejor app del tiempo que he probado. Tiene pronósticos detallados y alertas de tormentas que realmente
+            funcionan.</p>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="./public/img/review-3.jpg" alt="3" class="img-user">
+          <h2>Cinthia Gómez</h2>
+          <p>Desde que empecé a usar esta app, nunca me sorprende el clima. Es muy confiable y me da toda la información
+            que necesito para salir preparado.</p>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="./public/img/review-4.jpg" alt="4" class="img-user">
+          <h2>Pedro Rodríguez</h2>
+          <p>Excelente diseño y funciones útiles como mapas interactivos y pronósticos extendidos. Es mi app favorita
+            para consultar el clima.</p>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="./public/img/review-5.jpg" alt="5" class="img-user">
+          <h2>Luna Martínez</h2>
+          <p>Una app fantástica que me ayuda a planear mis actividades diarias. La recomiendo a cualquiera que quiera
+            estar siempre informado sobre el clima</p>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="./public/img/review-6.jpg" alt="6" class="img-user">
+          <h2>Germán Pérez</h2>
+          <p>¡Esta app del tiempo es la caña, informa sobre el pronóstico a tiempo real y con una precisión
+            íncreible,100%
+            recomendada!</p>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
   </div>
 
   <!--Haciendo el functions-container-->
   <div class="functions-container">
     <div class="info-container">
       <div class="info-tittle">
-        <h2>Más que una app del tiempo</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown</p>
+        <h2><span>Más</span> que <br>una app del tiempo</h2>
+        <p>Climatik posee información a tiempo real sobre el pronótico. Brinda todas las facilidades que el usuario
+          podría necesitar: alertas de tormenta, cambios drásticos de temperatura. Además posee una interfáz sencilla
+          e intuitiva.</p>
         <div class="download">
           <button id="boton"> Download </button>
         </div>
@@ -63,15 +118,22 @@
     </div>
   </div>
 
-  <!--<div class="items">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
-    <div class="item">6</div>
+  <div class="alert-container">
+    <div class="alert-tittle">
+      <p class="stroke">Sé el primero en coger el chubasquero</p>
+      <p class="stroke">Sé el primero en coger el chubasquero</p>
+      <p class="stroke">Sé el primero en coger el chubasquero</p>
+    </div>
+    <div class="alert-content">
+      <img src="" alt="">
+      <div class="alert-info">Recibe alertas a tiempo real sobre cambios drásticos y tormentas</div>
+
+    </div>
+
   </div>
--->
+
+
+
   <div class="paginas">
     <div class="pag">1</div>
     <div class="pag">2</div>
@@ -86,6 +148,11 @@
   <div class="footer">
     <p>pie de pagina</p>
   </div>
+
+  <!--Linnk del swipper para el carrusel-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script scrc="script.js"></script>
 </body>
 
 </html>
