@@ -1,0 +1,52 @@
+---
+
+---
+
+<script>
+    const goUpButton = document.querySelector(".goUpButton") as HTMLElement;
+
+    function toggleGoUpButton() {
+        if (window.scrollY < 500) {
+            goUpButton.style.opacity = "0";
+            goUpButton.style.pointerEvents = "none";
+        } else {
+            goUpButton.style.opacity = "1";
+            goUpButton.style.pointerEvents = "auto";
+        }
+    }
+
+    window.addEventListener("scroll", toggleGoUpButton);
+    toggleGoUpButton();
+
+    goUpButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+<div class="goUpButton">⮝</div>
+
+<style>
+    .goUpButton {
+        background-color: #2128bd;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        align-content: center;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: #f5f5f5;
+        cursor: pointer;
+        border-style: solid;
+        border-width: 3px;
+        transition: all 0.2s linear;
+    }
+
+    .goUpButton:hover {
+        background-color: #868cf9;
+    }
+</style>
