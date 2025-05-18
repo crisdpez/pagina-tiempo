@@ -1,0 +1,157 @@
+---
+
+---
+<div class="banner-container">
+    <img src="../public/img/banner.jpg" alt="">
+</div>
+<div class="faq-container">
+    <div class="faq-margin">
+  <div class="faq-title">
+    <h1>Preguntas frecuentes de nuestros clientes</h1>
+  </div>
+  <section class="faq">
+    <div class="question-container">
+      <div class="question">
+        <button>
+          <span>¿Cuál es tu nombre drag?</span>
+          <span
+            ><img
+              src="./public/img/angle-down-solid.svg"
+              alt="angle-down"
+            /></span
+          >
+        </button>
+        <p>La respuesta de la pregunta bien woke</p>
+      </div>
+
+      <div class="question">
+        <button>
+          <span>¿Cuál es tu nombre drag?</span>
+          <span
+            ><img
+              src="./public/img/angle-down-solid.svg"
+              alt="angle-down"
+            /></span
+          >
+        </button>
+        <p>La respuesta de la pregunta bien woke</p>
+      </div>
+
+      <div class="question">
+        <button>
+          <span>¿Cuál es tu nombre drag?</span>
+          <span
+            ><img
+              src="./public/img/angle-down-solid.svg"
+              alt="angle-down"
+            /></span
+          >
+        </button>
+        <p>La respuesta de la pregunta bien woke</p>
+      </div>
+
+      <div class="question">
+        <button>
+          <span>¿Cuál es tu nombre drag?</span>
+          <span
+            ><img
+              src="./public/img/angle-down-solid.svg"
+              alt="angle-down"
+            /></span
+          >
+        </button>
+        <p>La respuesta de la pregunta bien woke</p>
+      </div>
+
+  </section>
+  </div>
+</div>
+
+<style>
+
+.banner-container{
+    height: 280px;
+    display: flex;
+    object-fit: cover;
+    }
+
+  .faq-container {
+    height: 950px;
+  }
+
+  .faq-margin {
+    margin: 0px 20px 0px 20px;
+  }
+
+  .faq-title {
+    text-align: center;
+    margin: 2rem 0;
+    padding-top: 60px;
+    color: #2128bd;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+
+  .questions-container {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .question {
+    border-bottom: 1px solid #fff;
+  }
+  .question button {
+    width: 100%;
+    background-color: #2128bd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border-radius: 15px;
+    font-size: 22px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+     outline: none;
+    
+  }
+  .question p {
+    font-size: 22px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    opacity: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+  }
+  .angle-arrow {
+    transition: transform 0.5s ease-in;
+    color: #fff;
+  }
+
+  .question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+</style>
+
+<script>
+    const buttons = document.querySelectorAll('button');
+
+buttons.forEach( button =>{
+    button.addEventListener('click',()=>{
+        const faq = button.nextElementSibling;
+        const icon = button.children[1];
+
+        faq.classList.toggle('show');
+        icon.classList.toggle('rotate');
+    })
+} )
+</script>

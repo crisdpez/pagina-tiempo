@@ -8,10 +8,10 @@
   </div>
 
   <div class="alert-title">
-    <p class="stroke">Sé el primero en <br/>coger el chubasquero</p>
+    <p class="stroke">Sé el primero en <br />coger el chubasquero</p>
     <div class="alert-info">
-      Recibe alertas a tiempo real sobre cambios drásticos y tormentas <br/> ¡Qué no
-      te pille el mal tiempo!
+      Recibe alertas a tiempo real sobre cambios drásticos y tormentas <br /> ¡Qué
+      no te pille el mal tiempo!
     </div>
   </div>
 </div>
@@ -24,12 +24,12 @@
     background: linear-gradient(to right, #868cf9, #fff);
     overflow: hidden;
 
-    & img{
-        height: auto;
-        object-fit: fill;
-        padding-left: 300px;
+    & img {
+      height: auto;
+      object-fit: fill;
+      padding-left: 300px;
     }
-}
+  }
 
   .alert-content {
     width: 40%;
@@ -46,6 +46,7 @@
     padding-top: 90px;
     padding-bottom: 3px;
     font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 500;
     font-size: 80px;
     display: flex;
     justify-content: center;
@@ -54,25 +55,27 @@
   }
 
   .alert-info {
+    height: 90px;
+    width: 480px;
+    padding: 50px 30px;
     color: #4b4b4b;
     font-size: 30px;
     font-family: Roboto, sans-serif;
     font-weight: 600;
     padding-top: 40px;
-  }
-
-  .alert-info {
-    height: 90px;
-    width: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #ffffffb0;
     border-radius: 20px;
-    padding: 50px 30px;
     text-align: justify;
-  }
 
+    &:hover{
+      background: #ffffff;
+      box-shadow: 0px 0px 20px 0px #2128bd;
+      transition: all 0.5s ease-in-out;
+    }
+  }
 
   .stroke {
     -webkit-text-stroke: 1px #2128bd;
