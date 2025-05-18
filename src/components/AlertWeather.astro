@@ -1,0 +1,107 @@
+---
+
+---
+
+<div class="alert-container">
+  <div class="alert-content">
+    /<img src="./public/img/rainjacket.svg" alt="" />
+  </div>
+
+  <div class="alert-title">
+    <p class="stroke">Sé el primero en <br/>coger el chubasquero</p>
+    <div class="alert-info">
+      Recibe alertas a tiempo real sobre cambios drásticos y tormentas <br/> ¡Qué no
+      te pille el mal tiempo!
+    </div>
+  </div>
+</div>
+
+<style>
+  .alert-container {
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, #868cf9, #fff);
+    overflow: hidden;
+
+    & img{
+        height: auto;
+        object-fit: fill;
+        padding-left: 300px;
+    }
+}
+
+  .alert-content {
+    width: 40%;
+    height: 700px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 0px 30px 20px 30px;
+  }
+
+  .alert-title {
+    width: 60%;
+    max-height: 700px;
+    padding-top: 90px;
+    padding-bottom: 3px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .alert-info {
+    color: #4b4b4b;
+    font-size: 30px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    padding-top: 40px;
+  }
+
+  .alert-info {
+    height: 90px;
+    width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffffb0;
+    border-radius: 20px;
+    padding: 50px 30px;
+    text-align: justify;
+  }
+
+
+  .stroke {
+    -webkit-text-stroke: 1px #2128bd;
+    color: transparent;
+    margin: 10px 0;
+    transition: color 1.5s ease;
+  }
+
+  .stroke.relleno {
+    color: #2128bd;
+  }
+</style>
+
+<script>
+  //  Animación de stroke
+  const stroke = document.querySelectorAll(".stroke");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("relleno");
+        }
+      });
+    },
+    { threshold: 0.85 }
+  ); // Cuando el 50% de la línea aparece
+
+  stroke.forEach((stroke) => {
+    observer.observe(stroke);
+  });
+</script>

@@ -1,0 +1,102 @@
+---
+
+---
+
+<div class="functions-container">
+  <div class="info-container">
+    <div class="info-title">
+      <h2><span>Más</span> que <br />una app del tiempo</h2>
+      <p>
+        Climatik posee información a tiempo real sobre el pronótico. Brinda
+        todas las facilidades que el usuario podría necesitar: alertas de
+        tormenta, cambios drásticos de temperatura. Además posee una interfáz
+        sencilla e intuitiva.
+      </p>
+      <div class="download">
+        <button id="boton"> Download </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="img-container">
+    <div class="mockup-img">
+      <img src="/public/img/mockup-prueba.jpg" alt="mockup-prueba" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .functions-container {
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info-container {
+    background: #2128bd;
+    width: 40%;
+    max-height: 700px;
+    padding-top: 5rem;
+  }
+
+  .funtions-title {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+
+    &.info-title h2 {
+      font-size: 60px;
+      font-family: "Bricolage Grotesque", sans-serif;
+      color: #fff;
+      padding: 3rem;
+      padding-bottom: 1rem;
+    }
+
+    &.info-title span {
+      font-size: 80px;
+      font-family: "Bricolage Grotesque", sans-serif;
+      color: #fff;
+      text-decoration: underline #fff 5px;
+    }
+  }
+
+  .download {
+    padding-right: 5rem;
+    display: flex;
+    justify-content: end;
+
+    &.download button {
+      background-color: #fff;
+      border: 3px solid #fff;
+      color: #2128bd;
+      height: 40px;
+      width: 100px;
+      border-radius: 0.4rem;
+      font-family: Roboto, sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+
+  .funtions-container p {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 3rem 4rem;
+  }
+
+  .img-container {
+    background: rgb(213 62 143);
+    width: 60%;
+    height: 700px;
+    overflow: hidden;
+
+    & .mockup-img img {
+      height: 700px;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+</style>
