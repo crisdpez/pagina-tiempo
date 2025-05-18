@@ -50,7 +50,7 @@
     }
   }
   .AboutUs-container {
-    height: 700px;
+    height: 650px;
     background: yellow;
     display: flex;
     flex-direction: row;
@@ -60,36 +60,80 @@
   }
 
   .About-Pablo {
-    width: 400px;
-    height: 400px;
-    background: red;
+    width: 380px;
+    height: 380px;
+    background: #868cf998;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+
+    &.About-Pablo:hover,
+    .hvr-rotate:focus,
+    .hvr-rotate:active {
+      -webkit-transform: rotate(4deg);
+      transform: rotate(4deg);
+    }
   }
   .About-Cris {
-    width: 400px;
-    height: 400px;
-    background: red;
+    width: 380px;
+    height: 380px;
+    background: #868cf998;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    hoverflow: hidden;
+    overflow: hidden;
     position: relative;
+    border-radius: 25px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+
+    &.About-Cris:hover,
+    .hvr-rotate:focus,
+    .hvr-rotate:active {
+      -webkit-transform: rotate(4deg);
+      transform: rotate(4deg);
+      box-shadow: 0 0 20px #fff;
+    }
 
     & .cris {
       position: absolute;
-      width: 380px;
+      width: 350px;
       height: auto;
       pointer-events: none;
+      top: 4px;
+      left: 10px;
+      object-fit: cover;
     }
   }
   .About-Michael {
-    width: 400px;
-    height: 400px;
-    background: red;
+    width: 380px;
+    height: 380px;
+    background: #868cf998;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+
+    &.About-Michael:hover,
+    .hvr-rotate:focus,
+    .hvr-rotate:active {
+      -webkit-transform: rotate(4deg);
+      transform: rotate(4deg);
+    }
   }
 </style>
