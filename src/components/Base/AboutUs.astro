@@ -6,9 +6,16 @@
   <h1>¿Quieres saber más sobre nosotros?</h1>
   <p>Somos el grupo con más <span>estilo :)</span></p>
   <div class="AboutUs-container">
-    <div class="About-Pablo"></div>
-    <div class="About-Cris"></div>
-    <div class="About-Michael"></div>
+    <div class="About-Pablo">
+      <img src="./public/img/cloud-solid.svg" alt="cloud" />
+    </div>
+    <div class="About-Cris">
+      <img class="cris" src="./public/img/CrisAbout.png" alt="" />
+      <img src="./public/img/sun-solid.svg" alt="sun" />
+    </div>
+    <div class="About-Michael">
+      <img src="./public/img/umbrella-solid.svg" alt="umbrella" />
+    </div>
   </div>
 </div>
 
@@ -16,7 +23,7 @@
   .AboutUs-title {
     text-align: center;
     margin-top: 50px;
-     color: #2128bd;
+    color: #2128bd;
     font-size: 30px;
     font-weight: 500;
     font-family: "Bricolage Grotesque", sans-serif;
@@ -49,21 +56,40 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-image: url("./public/img/wallpaper.jpg");
   }
 
   .About-Pablo {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   .About-Cris {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    hoverflow: hidden;
+    position: relative;
+
+    & .cris {
+      position: absolute;
+      width: 380px;
+      height: auto;
+      pointer-events: none;
+    }
   }
   .About-Michael {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 </style>
