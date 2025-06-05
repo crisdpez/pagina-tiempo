@@ -2,7 +2,7 @@
 
 ---
 <div class="banner-container">
-    <img src="../public/img/banner.jpg" alt="">
+  <h1>Climatik la app que te informa del pronóstico a tiempo real</h1>
 </div>
 
 <div class="functions-container">
@@ -10,9 +10,7 @@
     <div class="info-title">
       <h2><span>Más</span> que <br />una app del tiempo</h2>
       <p>
-        Climatik posee información a tiempo real sobre el pronóstico. Brinda
-        todas las facilidades que el usuario podría necesitar: alertas, chats para consultas, largas previsiones y hasta un mapa interactivo. Podrás hacerte tu propia cuenta y disfrutar de contenido adicional. Además posee una interfáz
-        sencilla e intuitiva.
+        Te brindamos todas las facilidades que el usuario podría necesitar: alertas, chats para consultas, largas previsiones y hasta un mapa interactivo. <strong>¡Hazte tu propia cuenta y disfruta de contenido exclusivo!</strong>
       </p>
       <div class="download">
         <button id="boton"> Download </button>
@@ -33,8 +31,23 @@
 
 .banner-container{
     height: 280px;
+    width: 100%;
     display: flex;
     object-fit: cover;
+    background-image: url("../public/img/banner.jpg");
+
+    & h1{
+      font-family: "Roboto", sans-serif;
+      color: #fff;
+      text-shadow: 0 0 10px #2128bd, 0 0 20px #2128bd, 0 0 30px #2128bd;
+      width: 80%;
+      height: 20%;
+      font-size: px;
+      text-align: center;
+      padding-top: 100px;
+      margin: 0 auto;
+      width: 80%;
+    }
     }
 
   .functions-container {

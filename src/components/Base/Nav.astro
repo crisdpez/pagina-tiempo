@@ -10,9 +10,9 @@
     <nav class="nav-menu">
       <ul>
         <li><a href="#home">Inicio</a></li>
-        <li><a href="#aboutUs"></a>Quienes somos</li>
-        <li><a href="#services"></a>Servicios</li>
-        <li><a href="#contact"></a>Contacto</li>
+        <li><a href="#aboutUs">Quienes somos</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a class="button" href="#contact">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -28,17 +28,23 @@
   align-items: center;
   padding: 1rem 2rem;
   background-color: #fff;
-  position: sticky
+  position: sticky;
 }
 a:visited{
   color: #2b2b2b;
 }
+
+a:visited.button{
+  color: #fff;
+}
+
 
 a, li{
   font-family: Roboto, sans-serif;
   font-weight: 600;
   text-decoration: none;
   list-style: none;
+  color: #2b2b2b;
 }
 
 .logo-header img{
@@ -58,7 +64,7 @@ a, li{
   color: #2128bd;
 }
 
-.nav-menu li:last-child{
+.button{
   background-color: #2128bd;
   border: 2px solid #2128bd;
   color: #fff;
@@ -67,7 +73,7 @@ a, li{
   cursor: pointer;
 }
 
-.nav-menu li:last-child:hover{
+.button:hover{
   background: transparent;
   border: 2px solid #2128bd;
   color: #2128bd;
@@ -75,3 +81,13 @@ a, li{
 }
 
 </style>
+
+<script>
+
+  const home = document.getElementById('home') as HTMLElement;
+
+home.addEventListener('click', () => {
+  console.log('Hizo click en Home');
+});
+
+</script>

@@ -134,6 +134,13 @@
 
 }
 
+.swiper-button-next{
+  z-index: 1000000;
+}
+.swiper-button-prev{
+  z-index: 1000000;
+}
+
 </style>
 
 
@@ -143,6 +150,7 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
 const swiper = new Swiper(".carrusel", {
+  modules: [Navigation, Pagination],
   loop: true,
 
   spaceBetween: 30,
@@ -174,5 +182,7 @@ const swiper = new Swiper(".carrusel", {
   },
 
 });
+
+
 
 </script>

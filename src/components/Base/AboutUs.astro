@@ -8,13 +8,16 @@
   <div class="AboutUs-container">
     <div class="About-Pablo">
       <img src="./public/img/cloud-solid.svg" alt="cloud" />
+      <p class="info-pablo">¡Hola soy Pablo, desarrollador web y amante de la tecnología!</p>
     </div>
     <div class="About-Cris">
       <img class="cris" src="./public/img/CrisAbout.png" alt="" />
       <img src="./public/img/sun-solid.svg" alt="sun" />
+      <p class="info-cris">¡Hola soy Cristina, diseñadora gráfica y desarrolladora web!</p>
     </div>
     <div class="About-Michael">
       <img src="./public/img/umbrella-solid.svg" alt="umbrella" />
+       <p class="info-michael">¡Hola soy Michael, desarrolladora web!</p>
     </div>
   </div>
 </div>
@@ -83,8 +86,27 @@
     .hvr-rotate:active {
       -webkit-transform: rotate(4deg);
       transform: rotate(4deg);
+      box-shadow: 0 0 20px #fff;
     }
   }
+
+  .About-Pablo .info-pablo {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2128bd;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+.About-Pablo:hover .info-pablo {
+  opacity: 1;
+}
+
   .About-Cris {
     width: 380px;
     height: 380px;
@@ -118,6 +140,23 @@
       object-fit: cover;
     }
   }
+
+  .About-Cris .info-cris {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2128bd;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+.About-Cris:hover .info-cris {
+  opacity: 1;
+}
   .About-Michael {
     width: 380px;
     height: 380px;
@@ -138,6 +177,24 @@
     .hvr-rotate:active {
       -webkit-transform: rotate(4deg);
       transform: rotate(4deg);
+      box-shadow: 0 0 20px #fff;
     }
   }
+
+   .About-Michael .info-michael {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2128bd;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+.About-Michael:hover .info-michael {
+  opacity: 1;
+}
 </style>

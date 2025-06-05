@@ -9,7 +9,7 @@
 
   <div class="alert-title">
     <p class="stroke">Sé el primero en <br/>coger el chubasquero</p>
-    <div class="alert-info">
+    <div class="alert-info" id="alert-info">
       Recibe alertas a tiempo real sobre cambios drásticos y tormentas.<br/>¡Que
       no te pille el mal tiempo!
     </div>
@@ -108,4 +108,17 @@
   stroke.forEach((stroke) => {
     observer.observe(stroke);
   });
+
+//Alerta al hacer click
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("alert-info");
+    if (el) {
+      el.style.cursor = 'pointer'; // Hace que el puntero cambie al pasar el mouse
+      el.addEventListener("click", () => {
+        alert("¡Alertas tan chulas como esta!");
+      });
+    }
+  });
+
 </script>
