@@ -11,6 +11,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "astro": "^5.7.13",
+    "sweetalert2": "^11.22.0",
     "swiper": "^11.2.6"
   }
 }

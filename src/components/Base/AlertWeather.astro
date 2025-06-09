@@ -91,6 +91,8 @@
 </style>
 
 <script>
+  import Swal from 'sweetalert2';
+  console.log("SweetAlert2 loaded:", Swal);
   //  Animación de stroke
   const stroke = document.querySelectorAll(".stroke");
 
@@ -114,9 +116,14 @@
   document.addEventListener("DOMContentLoaded", () => {
     const el = document.getElementById("alert-info");
     if (el) {
-      el.style.cursor = 'pointer'; // Hace que el puntero cambie al pasar el mouse
+      el.style.cursor = 'pointer'; 
       el.addEventListener("click", () => {
-        alert("¡Alertas tan chulas como esta!");
+        Swal.fire({
+        title: "Alerta",
+        text: "¡Alertas tan chulas como esta!",
+        icon: "success"
+}
+);
       });
     }
   });
