@@ -574,6 +574,73 @@ pnpm-debug.log*
 .idea/
 </file>
 
+<file path="src/components/Base/Footer.astro">
+---
+
+---
+
+
+
+<div class="footer-container">
+    <div class="footer-info">
+        <div class="logo"> <img src="../img/imagotipo.svg" alt=""></div>
+        <div class="about-footer">
+            <h1>Acerca de</h1>
+            <p>Climatik tu clima a un click</p>
+        </div>
+        <div class="contact-footer">
+            <h1>Contacto</h1>
+            <p>¿Tienes alguna consulta? ¡Llámanos!</p>
+        </div>
+        <div class="follow-footer">
+            <h1>¡Síguenos en redes!</h1>
+            <div class="socials">
+                <img src="../public/img/behance.png" alt="">
+                <img src="../public/img/linkedin.png" alt="">
+                <img src="../public/img/instagram.png" alt="">
+                <img src="../public/img/twitter.png" alt="">
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<section id="contact">
+
+  </section>
+
+
+<style>
+.footer-container{
+height: 200px;
+background: #2128bd;
+color: #fff;
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+
+    & h1{
+        font-family: Roboto, sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
+
+.logo{
+    width: 100px;
+}
+
+.socials img{
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+</style>
+</file>
+
 <file path="src/components/Base/AboutUs.astro">
 ---
 
@@ -585,13 +652,16 @@ pnpm-debug.log*
   <div class="AboutUs-container">
     <div class="About-Pablo">
       <img src="./public/img/cloud-solid.svg" alt="cloud" />
+      <p class="info-pablo">¡Hola soy Pablo, programador frontend y amante de la tecnología!</p>
     </div>
     <div class="About-Cris">
       <img class="cris" src="./public/img/CrisAbout.png" alt="" />
       <img src="./public/img/sun-solid.svg" alt="sun" />
+      <p class="info-cris">¡Hola soy Cristina, diseñadora gráfica y programadora frontend!</p>
     </div>
     <div class="About-Michael">
       <img src="./public/img/umbrella-solid.svg" alt="umbrella" />
+       <p class="info-michael">¡Hola soy Michael, programadora frontend!</p>
     </div>
   </div>
 </div>
@@ -660,8 +730,27 @@ pnpm-debug.log*
     .hvr-rotate:active {
       -webkit-transform: rotate(4deg);
       transform: rotate(4deg);
+      box-shadow: 0 0 20px #fff;
     }
   }
+
+  .About-Pablo .info-pablo {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2128bd;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+.About-Pablo:hover .info-pablo {
+  opacity: 1;
+}
+
   .About-Cris {
     width: 380px;
     height: 380px;
@@ -695,6 +784,23 @@ pnpm-debug.log*
       object-fit: cover;
     }
   }
+
+  .About-Cris .info-cris {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2128bd;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+.About-Cris:hover .info-cris {
+  opacity: 1;
+}
   .About-Michael {
     width: 380px;
     height: 380px;
@@ -715,490 +821,26 @@ pnpm-debug.log*
     .hvr-rotate:active {
       -webkit-transform: rotate(4deg);
       transform: rotate(4deg);
-    }
-  }
-</style>
-</file>
-
-<file path="src/components/Base/AlertWeather.astro">
----
-
----
-
-<div class="alert-container">
-  <div class="alert-content">
-    /<img src="./public/img/rainjacket.svg" alt="" />
-  </div>
-
-  <div class="alert-title">
-    <p class="stroke">Sé el primero en <br/>coger el chubasquero</p>
-    <div class="alert-info">
-      Recibe alertas a tiempo real sobre cambios drásticos y tormentas.<br/>¡Que
-      no te pille el mal tiempo!
-    </div>
-  </div>
-</div>
-
-<style>
-  .alert-container {
-    height: 700px;
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(to right, #868cf9, #fff);
-    overflow: hidden;
-
-    & img {
-      height: auto;
-      object-fit: fill;
-      padding-left: 300px;
+      box-shadow: 0 0 20px #fff;
     }
   }
 
-  .alert-content {
-    width: 40%;
-    height: 700px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    padding: 0px 30px 20px 30px;
-  }
-
-  .alert-title {
-    width: 60%;
-    max-height: 700px;
-    padding-top: 90px;
-    padding-bottom: 3px;
-    font-family: "Bricolage Grotesque", sans-serif;
-    font-weight: 500;
-    font-size: 80px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .alert-info {
-    height: 90px;
-    width: 480px;
-    padding: 50px 30px;
-    color: #2b2b2b;
-    font-size: 30px;
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    padding-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ffffffb0;
-    border-radius: 20px;
-    text-align: justify;
-
-    &:hover{
-      background: #ffffff;
-      box-shadow: 0px 0px 20px 0px #2128bd;
-      transition: all 0.5s ease-in-out;
-    }
-
-  }
-
-  .stroke {
-    -webkit-text-stroke: 1px #2128bd;
-    color: transparent;
-    margin: 10px 0;
-    transition: color 1.5s ease;
-  }
-
-  .stroke.relleno {
-    color: #2128bd;
-  }
-</style>
-
-<script>
-  //  Animación de stroke
-  const stroke = document.querySelectorAll(".stroke");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("relleno");
-        }
-      });
-    },
-    { threshold: 0.85 }
-  ); // Cuando el 50% de la línea aparece
-
-  stroke.forEach((stroke) => {
-    observer.observe(stroke);
-  });
-</script>
-</file>
-
-<file path="src/components/Base/FAQ.astro">
----
-
----
-
-<div class="faq-container">
-    <div class="faq-margin">
-      <!-- <div class="meeting"><img src="./img/meeting.jpg" alt=""></div> -->
-  <div class="faq-title">
-    <h1>Preguntas frecuentes de nuestros clientes</h1>
-  </div>
-  <section class="faq">
-    <div class="question-container">
-      <div class="question">
-        <button>
-          <span>¿Pregunta sobre un tema?</span>
-          <span
-            ><img class="angle-arrow"
-              src="./public/img/angle-down-solid.svg"
-              alt="angle-down"
-            /></span
-          >
-        </button>
-        <p>La respuesta de la pregunta :)</p>
-      </div>
-
-      <div class="question">
-        <button>
-          <span>¿Pregunta sobre un tema?</span>
-          <span
-            ><img class="angle-arrow"
-              src="./public/img/angle-down-solid.svg"
-              alt="angle-down"
-            /></span
-          >
-        </button>
-        <p>La respuesta de la pregunta :)</p>
-      </div>
-
-      <div class="question">
-        <button>
-          <span>¿Pregunta sobre un tema?</span>
-          <span
-            ><img class="angle-arrow"
-              src="./public/img/angle-down-solid.svg"
-              alt="angle-down"
-            /></span
-          >
-        </button>
-        <p>La respuesta de la pregunta :)</p>
-      </div>
-
-      <div class="question">
-        <button>
-          <span>¿Pregunta sobre un tema?</span>
-          <span
-            ><img class="angle-arrow"
-              src="./public/img/angle-down-solid.svg"
-              alt="angle-down"
-            /></span
-          >
-        </button>
-        <p>La respuesta de la pregunta :)</p>
-      </div>
-
-      
-
-  </section>
-  </div>
-</div>
-
-<style>
-
-.meeting{
-    width: 500px;
-    height: auto;
-    overflow: hidden;
-    object-fit: cover;
+   .About-Michael .info-michael {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2128bd;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
 }
 
-  .faq-container {
-    height: 950px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .faq-margin {
-    margin: 0px 20px 0px 20px;
-  }
-
-  .faq-title {
-    text-align: center;
-    margin: 2rem 0;
-    padding-top: 60px;
-    color: #2128bd;
-    font-size: 30px;
-    font-weight: 500;
-    font-family: "Bricolage Grotesque", sans-serif;
-  }
-
-  .questions-container {
-    max-width: 800px;
-    margin: auto;
-  }
-
-.angle-arrow {
-   color: #fff;
-    width: 20px;
-  }
-
-  .question button {
-    width: 100%;
-    background-color: #2128bd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 15px;
-    border-radius: 15px;
-    font-size: 22px;
-    font-family: Roboto, sans-serif;
-    font-weight: 600;
-    font-weight: 700;
-    color: #fff;
-    cursor: pointer;
-     outline: none;
-    
-  }
-  .question p {
-    font-size: 22px;
-    font-family: Roboto, sans-serif;
-    font-weight: 600;
-    opacity: 0;
-    line-height: 1.5;
-    overflow: hidden;
-    transition: all 0.6s ease;
-  }
-  .angle-arrow {
-    transition: transform 0.5s ease-in;
-    color: #fff;
-  }
-
-  .question p.show{
-    max-height: 200px; 
-    opacity: 1;
-    padding:0px 15px 30px 15px;
+.About-Michael:hover .info-michael {
+  opacity: 1;
 }
-.question button .d-arrow.rotate{
-    transform: rotate(180deg);
-}
-</style>
-
-<script>
-    const buttons = document.querySelectorAll('button');
-
-buttons.forEach( button =>{
-    button.addEventListener('click',()=>{
-        const faq = button.nextElementSibling;
-        const icon = button.children[1];
-
-        faq.classList.toggle('show');
-        icon.classList.toggle('rotate');
-    })
-} )
-</script>
-</file>
-
-<file path="src/components/Base/Footer.astro">
----
-
----
-
-
-
-<div class="footer-container">
-    <div class="footer-info">
-        <div class="logo"> <img src="../img/imagotipo.svg" alt=""></div>
-        <div class="about-footer">
-            <h1>Acerca de</h1>
-            <p>Climatik tu clima a un click</p>
-        </div>
-        <div class="contact-footer">
-            <h1>Contacto</h1>
-            <p>¿Tienes alguna consulta? ¡Llámanos!</p>
-        </div>
-        <div class="follow-footer">
-            <h1>¡Síguenos en redes!</h1>
-            <div class="socials">
-                <img src="../public/img/behance.png" alt="">
-                <img src="../public/img/linkedin.png" alt="">
-                <img src="../public/img/instagram.png" alt="">
-                <img src="../public/img/twitter.png" alt="">
-            </div>
-        </div>
-        
-    </div>
-</div>
-
-<section id="contact">
-
-  </section>
-
-
-<style>
-.footer-container{
-height: 200px;
-background: #2128bd;
-color: #fff;
-}
-
-.footer-info{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 40px;
-
-    & h1{
-        font-family: Roboto, sans-serif;
-        font-size: 25px;
-        font-weight: 600;
-    }
-}
-
-.logo{
-    width: 100px;
-}
-
-.socials img{
-    height: 40px;
-    filter: brightness(0) invert(1);
-}
-
-</style>
-</file>
-
-<file path="src/components/Base/Functions.astro">
----
-
----
-<div class="banner-container">
-  <h1>Climatik la app que te informa del pronóstico a tiempo real</h1>
-</div>
-
-<div class="functions-container">
-  <div class="info-container">
-    <div class="info-title">
-      <h2><span>Más</span> que <br />una app del tiempo</h2>
-      <p>
-        Climatik posee información a tiempo real sobre el pronóstico. Brinda
-        todas las facilidades que el usuario podría necesitar: alertas, chats para consultas, largas previsiones y hasta un mapa interactivo. Podrás hacerte tu propia cuenta y disfrutar de contenido adicional. Además posee una interfáz
-        sencilla e intuitiva.
-      </p>
-      <div class="download">
-        <button id="boton"> Download </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="img-container">
-    <div class="mockup-img">
-      <img src="/public/img/mockup-prueba.jpg" alt="mockup-prueba" />
-    </div>
-  </div>
-</div>
-
-<style></style>
-
-<style>
-
-.banner-container{
-    height: 280px;
-    width: 100%;
-    display: flex;
-    object-fit: cover;
-    background-image: url("../public/img/banner.jpg");
-
-    & h1{
-      font-family: "Roboto", sans-serif;
-      color: #fff;
-      text-shadow: 0 0 10px #2128bd, 0 0 20px #2128bd, 0 0 30px #2128bd;
-      width: 80%;
-      height: 20%;
-      font-size: px;
-      text-align: center;
-      padding-top: 100px;
-      margin: 0 auto;
-      width: 80%;
-    }
-    }
-
-  .functions-container {
-    height: 700px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .info-container {
-    background: #2128bd;
-    width: 40%;
-    max-height: 700px;
-    padding-top: 1rem;
-    
-  }
-
-  .info-title {
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-
-    &.info-title h2 {
-      font-size: 60px;
-      font-family: "Bricolage Grotesque", sans-serif;
-      color: #fff;
-      padding: 3rem 3rem 0rem 3rem;
-      margin-bottom: 10px;
-    }
-
-    &.info-title span {
-      font-size: 80px;
-      font-family: "Bricolage Grotesque", sans-serif;
-      color: #fff;
-      text-decoration: underline #fff 5px;
-    }
-
-    & p {
-    font-family: Roboto, sans-serif;
-    font-size: 18px;
-    color: #fff;
-    padding: 0 3rem 4rem;
-    line-height: 1.3;
-    }
-  }
-
-
-  .download {
-    padding-right: 5rem;
-    display: flex;
-    justify-content: end;
-
-    &.download button {
-      background-color: #fff;
-      border: 3px solid #fff;
-      color: #2128bd;
-      height: 40px;
-      width: 100px;
-      border-radius: 0.4rem;
-      font-family: Roboto, sans-serif;
-      font-weight: 800;
-      font-size: 18px;
-      cursor: pointer;
-    }
-  }
-
-  
-
-  .img-container {
-    width: 60%;
-    height: 700px;
-    overflow: hidden;
-
-    & .mockup-img img {
-      height: 700px;
-      width: 100%;
-      object-fit: cover;
-      display: block;
-    }
-  }
 </style>
 </file>
 
@@ -1299,7 +941,7 @@ color: #fff;
 .card-list .card-item{
   color: #fff;
   background:#ffffff4f;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(35px);
   width: 400px;
   padding: 35px;
   display: flex;
@@ -1339,6 +981,13 @@ color: #fff;
 
 }
 
+.swiper-button-next{
+  z-index: 1000000;
+}
+.swiper-button-prev{
+  z-index: 1000000;
+}
+
 </style>
 
 
@@ -1348,6 +997,7 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
 const swiper = new Swiper(".carrusel", {
+  modules: [Navigation, Pagination],
   loop: true,
 
   spaceBetween: 30,
@@ -1380,7 +1030,50 @@ const swiper = new Swiper(".carrusel", {
 
 });
 
+
+
 </script>
+</file>
+
+<file path="src/layouts/Layout.astro">
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Climatik</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+	html,
+	body {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  background: #fff;
+  color: #2c2c2c;
+  font-family: Roboto, sans-serif;
+	}
+	html {
+      scroll-behavior: smooth;
+    }
+
+</style>
 </file>
 
 <file path="package.json">
@@ -1397,9 +1090,471 @@ const swiper = new Swiper(".carrusel", {
   "dependencies": {
     "aos": "^2.3.4",
     "astro": "^5.7.13",
+    "sweetalert2": "^11.22.0",
     "swiper": "^11.2.6"
   }
 }
+</file>
+
+<file path="src/components/Base/AlertWeather.astro">
+---
+
+---
+
+<div class="alert-container">
+  <div class="alert-content">
+    /<img src="./public/img/rainjacket.svg" alt="" />
+  </div>
+
+  <div class="alert-title">
+    <p class="stroke">Sé el primero en <br/>coger el chubasquero</p>
+    <div class="alert-info" id="alert-info">
+      Recibe alertas a tiempo real sobre cambios drásticos y tormentas.<br/>¡Que
+      no te pille el mal tiempo!
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  </section>
+  
+<style>
+  .alert-container {
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, #868cf9, #fff);
+    overflow: hidden;
+
+    & img {
+      height: auto;
+      object-fit: fill;
+      padding-left: 300px;
+    }
+  }
+
+  .alert-content {
+    width: 40%;
+    height: 700px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 0px 30px 20px 30px;
+  }
+
+  .alert-title {
+    width: 60%;
+    max-height: 700px;
+    padding-top: 90px;
+    padding-bottom: 3px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 500;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .alert-info {
+    height: 90px;
+    width: 480px;
+    padding: 50px 30px;
+    color: #2b2b2b;
+    font-size: 30px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffffb0;
+    border-radius: 20px;
+    text-align: justify;
+
+    &:hover{
+      background: #ffffff;
+      box-shadow: 0px 0px 20px 0px #2128bd;
+      transition: all 0.5s ease-in-out;
+    }
+
+  }
+
+  .stroke {
+    -webkit-text-stroke: 1px #2128bd;
+    color: transparent;
+    margin: 10px 0;
+    transition: color 1.5s ease;
+  }
+
+  .stroke.relleno {
+    color: #2128bd;
+  }
+</style>
+
+<script>
+  import Swal from 'sweetalert2';
+  console.log("SweetAlert2 loaded:", Swal);
+  //  Animación de stroke
+  const stroke = document.querySelectorAll(".stroke");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("relleno");
+        }
+      });
+    },
+    { threshold: 0.85 }
+  ); // Cuando el 50% de la línea aparece
+
+  stroke.forEach((stroke) => {
+    observer.observe(stroke);
+  });
+
+//Alerta al hacer click
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("alert-info");
+    if (el) {
+      el.style.cursor = 'pointer'; 
+      el.addEventListener("click", () => {
+        Swal.fire({
+        title: "Alerta",
+        text: "¡Alertas tan chulas como esta!",
+        icon: "success"
+}
+);
+      });
+    }
+  });
+
+</script>
+</file>
+
+<file path="src/components/Base/FAQ.astro">
+---
+
+---
+
+<div class="faq-container">
+    <div class="faq-margin">  
+  <div class="faq-title">
+    <h1>Preguntas frecuentes de nuestros clientes</h1>
+  </div>
+<div class="margin-container">
+  <section class="faq">
+    <div class="question-container">
+      <div class="question">
+        <button>
+          <span>¿Cómo consulto el tiempo de una ciudad específica?
+</span>
+          <span
+            ><img class="angle-arrow"
+              src="./public/img/angle-down-solid.svg"
+              alt="angle-down"
+            /></span
+          >
+        </button>
+        <p>Fácil, solo tienes que ingresar el nombre de tu localidad y tendrás la previsión del tiempo en cuestión de segundos! </p>
+      </div>
+
+      <div class="question">
+        <button>
+          <span>¿Cada cuánto se actualizan los datos del tiempo?</span>
+          <span
+            ><img class="angle-arrow"
+              src="./public/img/angle-down-solid.svg"
+              alt="angle-down"
+            /></span
+          >
+        </button>
+        <p>Actualizamos los datos a tiempo real</p>
+      </div>
+
+      <div class="question">
+        <button>
+          <span>¿Qué tipo de preguntas puedo hacerle al chatbot?</span>
+          <span
+            ><img class="angle-arrow"
+              src="./public/img/angle-down-solid.svg"
+              alt="angle-down"
+            /></span
+          >
+        </button>
+        <p>Puedes hacerle todo tipo de preguntas relacionadas con el pronóstico del tiempo. Por ejemplo, ¿que temperatura hay en Málaga?</p>
+      </div>
+
+      <div class="question">
+        <button>
+          <span>¿Qué diferencia tiene ser miembro?</span>
+          <span
+            ><img class="angle-arrow"
+              src="./public/img/angle-down-solid.svg"
+              alt="angle-down"
+            /></span
+          >
+        </button>
+        <p>Siendo miembro disfrutas de funcionalidades adicionales como el uso de mapa intectactivo o previsión de 5 días</p>
+        </div>
+        </section>
+        <div class="meeting"><img src="./public/img/meeting.webp" alt=""></div>
+      </div>
+  </div>
+</div>
+
+<style>
+
+.meeting{
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 15px;
+    position: relative;  
+  }
+
+.meeting img{
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .faq-container {
+    height: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .margin-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    justify-content: space-between;
+  }
+
+  .faq{
+    width: 500px;
+
+  }
+
+  .faq-margin {
+    margin: 0px 20px 0px 20px;
+  }
+
+  .faq-title {
+    text-align: center;
+    margin: 2rem 0;
+    padding-top: 60px;
+    color: #2128bd;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+
+  .questions-container {
+    max-width: 800px;
+    margin: auto;
+  }
+
+.angle-arrow {
+   color: #fff;
+    width: 20px;
+  }
+
+  .question button {
+    width: 100%;
+    background-color: #2128bd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border-radius: 15px;
+    font-size: 22px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+     outline: none;
+    
+  }
+  .question p {
+    font-size: 22px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    opacity: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+  }
+  .angle-arrow {
+    transition: transform 0.5s ease-in;
+    color: #fff;
+  }
+
+  .question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+</style>
+
+<script>
+    const buttons = document.querySelectorAll('button');
+
+buttons.forEach( button =>{
+    button.addEventListener('click',()=>{
+        const faq = button.nextElementSibling;
+        const icon = button.children[1];
+
+        faq.classList.toggle('show');
+        icon.classList.toggle('rotate');
+    })
+} )
+</script>
+</file>
+
+<file path="src/components/Base/Functions.astro">
+---
+
+---
+<div class="banner-container">
+  <h1>Climatik la app que te informa del pronóstico a tiempo real</h1>
+</div>
+
+<div class="functions-container">
+  <div class="info-container">
+    <div class="info-title">
+      <h2><span>Más</span> que <br />una app del tiempo</h2>
+      <p>
+        Te brindamos todas las facilidades que el usuario podría necesitar: alertas, chats para consultas, largas previsiones y hasta un mapa interactivo. <strong>¡Hazte tu propia cuenta y disfruta de contenido exclusivo!</strong>
+      </p>
+      <div class="download">
+        <button id="boton"> Download </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="img-container">
+    <div class="mockup-img">
+      <img src="/public/img/mockup-prueba.jpg" alt="mockup-prueba" />
+    </div>
+  </div>
+</div>
+
+<style></style>
+
+<style>
+
+.banner-container{
+    height: 280px;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    background-image: url("../public/img/banner.jpg");
+
+    & h1{
+      font-family: "Roboto", sans-serif;
+      color: #fff;
+      text-shadow: 0 0 10px #2128bd, 0 0 20px #2128bd, 0 0 30px #2128bd;
+      width: 80%;
+      height: 20%;
+      font-size: px;
+      text-align: center;
+      padding-top: 100px;
+      margin: 0 auto;
+      width: 80%;
+    }
+    }
+
+  .functions-container {
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info-container {
+    background: #2128bd;
+    width: 40%;
+    max-height: 700px;
+    padding-top: 1rem;
+    
+  }
+
+  .info-title {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+
+    &.info-title h2 {
+      font-size: 60px;
+      font-family: "Bricolage Grotesque", sans-serif;
+      color: #fff;
+      padding: 3rem 3rem 0rem 3rem;
+      margin-bottom: 10px;
+    }
+
+    &.info-title span {
+      font-size: 80px;
+      font-family: "Bricolage Grotesque", sans-serif;
+      color: #fff;
+      text-decoration: underline #fff 5px;
+    }
+
+    & p {
+    font-family: Roboto, sans-serif;
+    font-size: 22px;
+    text-align: left;
+    color: #fff;
+    padding: 0 3rem 4rem;
+    line-height: 1.3;
+    }
+  }
+
+
+  .download {
+    padding-right: 5rem;
+    display: flex;
+    justify-content: end;
+
+    &.download button {
+      background-color: #fff;
+      border: 3px solid #fff;
+      color: #2128bd;
+      height: 40px;
+      width: 100px;
+      border-radius: 0.4rem;
+      font-family: Roboto, sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+
+  
+
+  .img-container {
+    width: 60%;
+    height: 700px;
+    overflow: hidden;
+
+    & .mockup-img img {
+      height: 700px;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+</style>
 </file>
 
 <file path="src/components/Base/Nav.astro">
@@ -1438,6 +1593,11 @@ const swiper = new Swiper(".carrusel", {
 a:visited{
   color: #2b2b2b;
 }
+
+a:visited.button{
+  color: #fff;
+}
+
 
 a, li{
   font-family: Roboto, sans-serif;
@@ -1500,12 +1660,13 @@ home.addEventListener('click', () => {
 
 <div class="title-service"><h1>Servicios</h1></div>
 <div class="bento">
+  <div class="img-service"></div>
   <div class="service" data-aos="zoom-in-up" data-aos-delay="500" data-aos-duration="1000">
-    <div class="img"> <img src="" alt=""></div>
     <div class="service-info">
       <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M12 17q1.5 0 2.613-.975T15.95 13.6q.05-.25-.112-.425T15.4 13H8.6q-.25 0-.425.175t-.125.425q.225 1.45 1.337 2.425T12 17m0 5q-1.875 0-3.512-.712t-2.85-1.925t-1.925-2.85T3 13V4q0-.825.588-1.412T5 2h14q.825 0 1.413.588T21 4v9q0 1.875-.712 3.513t-1.925 2.85t-2.85 1.925T12 22m0-2q2.9 0 4.95-2.05T19 13V4H5v9q0 2.9 2.05 4.95T12 20M9 7q-.675 0-1.187.4t-.713 1q-.075.225.075.413T7.6 9h2.8q.25 0 .4-.187t.1-.413q-.2-.6-.712-1T9 7m6 0q-.675 0-1.187.4t-.713 1q-.075.225.075.413T13.6 9h2.8q.25 0 .4-.187t.1-.413q-.2-.6-.712-1T15 7"/></svg></div>
       <h2>ChatBot</h2>
       <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</p>
+    
     </div>
   </div>
   <div class="service" data-aos="zoom-in-up" data-aos-delay="500" data-aos-duration="1000">
@@ -1514,7 +1675,9 @@ home.addEventListener('click', () => {
       <h2>Mapa</h2>
       <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</p>
     </div>
+    
   </div>
+  
   <div class="service" data-aos="zoom-in-up" data-aos-delay="500" data-aos-duration="1000">
     <div class="service-info">
       <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M5.85 17.1q1.275-.975 2.85-1.537T12 15t3.3.563t2.85 1.537q.875-1.025 1.363-2.325T20 12q0-3.325-2.337-5.663T12 4T6.337 6.338T4 12q0 1.475.488 2.775T5.85 17.1M12 13q-1.475 0-2.488-1.012T8.5 9.5t1.013-2.488T12 6t2.488 1.013T15.5 9.5t-1.012 2.488T12 13m0 9q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg></div>
@@ -1531,11 +1694,26 @@ home.addEventListener('click', () => {
   </div>
 </div>
 
-<section id="services">
-  </section>
+
 
 <style>
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   .service-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+   .img-service{
+    width: auto;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 15%;
+   }
   .title-service {
     font-family:"Bricolage Grotesque", sans-serif;
     font-size: 30px;
@@ -1594,47 +1772,6 @@ home.addEventListener('click', () => {
     display:flex;
     justify-content: center;
   }
-</style>
-</file>
-
-<file path="src/layouts/Layout.astro">
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Climatik</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
-
-
-
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
-
-	html,
-	body {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  background: #fff;
-  color: #2c2c2c;
-  font-family: Roboto, sans-serif;
-	}
-	html {
-      scroll-behavior: smooth;
-    }
-
 </style>
 </file>
 
