@@ -76,8 +76,8 @@
             </p>
           </div>
         </div>
-        <div class="meeting"><img src="/img/meeting.webp" alt="" /></div>
       </section>
+      <div class="meeting"><img src="/img/meeting.webp" alt="" /></div>
     </div>
   </div>
 
@@ -116,6 +116,7 @@
 
     .faq {
       width: 500px;
+      display: ;
     }
 
     .faq-margin {
@@ -190,7 +191,7 @@
         const faq = button.nextElementSibling;
         const icon = button.children[1];
 
-        faq.classList.toggle("show");
+        faq?.classList.toggle("show");
         icon.classList.toggle("rotate");
       });
     });
