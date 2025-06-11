@@ -4,21 +4,20 @@
 
 <div class="alert-container">
   <div class="alert-content">
-    /<img src="./public/img/rainjacket.svg" alt="" />
+    /<img src="/img/rainjacket.svg" alt="" />
   </div>
 
   <div class="alert-title">
-    <p class="stroke">Sé el primero en <br/>coger el chubasquero</p>
+    <p class="stroke">Sé el primero en <br />coger el chubasquero</p>
     <div class="alert-info" id="alert-info">
-      Recibe alertas a tiempo real sobre cambios drásticos y tormentas.<br/>¡Que
-      no te pille el mal tiempo!
+      Recibe alertas a tiempo real sobre cambios drásticos y tormentas.<br
+      />¡Que no te pille el mal tiempo!
     </div>
   </div>
 </div>
 
-<section id="services">
-  </section>
-  
+<section id="services"></section>
+
 <style>
   .alert-container {
     height: 700px;
@@ -73,12 +72,11 @@
     border-radius: 20px;
     text-align: justify;
 
-    &:hover{
+    &:hover {
       background: #ffffff;
       box-shadow: 0px 0px 20px 0px #2128bd;
       transition: all 0.5s ease-in-out;
     }
-
   }
 
   .stroke {
@@ -94,7 +92,7 @@
 </style>
 
 <script>
-  import Swal from 'sweetalert2';
+  import Swal from "sweetalert2";
   console.log("SweetAlert2 loaded:", Swal);
   //  Animación de stroke
   const stroke = document.querySelectorAll(".stroke");
@@ -114,21 +112,19 @@
     observer.observe(stroke);
   });
 
-//Alerta al hacer click
+  //Alerta al hacer click
 
   document.addEventListener("DOMContentLoaded", () => {
     const el = document.getElementById("alert-info");
     if (el) {
-      el.style.cursor = 'pointer'; 
+      el.style.cursor = "pointer";
       el.addEventListener("click", () => {
         Swal.fire({
-        title: "Alerta",
-        text: "¡Alertas tan chulas como esta!",
-        icon: "success"
-}
-);
+          title: "Alerta",
+          text: "¡Alertas tan chulas como esta!",
+          icon: "success",
+        });
       });
     }
   });
-
 </script>

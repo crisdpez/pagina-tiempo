@@ -3,185 +3,196 @@
 ---
 
 <div class="faq-container">
-    <div class="faq-margin">  
-  <div class="faq-title">
-    <h1>Preguntas frecuentes de nuestros clientes</h1>
-  </div>
-<div class="margin-container">
-  <section class="faq">
-    <div class="question-container">
-      <div class="question">
-        <button>
-          <span>¿Cómo consulto el tiempo de una ciudad específica?
-</span>
-          <span
-            ><img class="angle-arrow"
-              src="./public/img/angle-down-solid.svg"
-              alt="angle-down"
-            /></span
-          >
-        </button>
-        <p>Fácil, solo tienes que ingresar el nombre de tu localidad y tendrás la previsión del tiempo en cuestión de segundos! </p>
-      </div>
+  <div class="faq-margin">
+    <div class="faq-title">
+      <h1>Preguntas frecuentes de nuestros clientes</h1>
+    </div>
+    <div class="margin-container">
+      <section class="faq">
+        <div class="question-container">
+          <div class="question">
+            <button>
+              <span>¿Cómo consulto el tiempo de una ciudad específica? </span>
+              <span
+                ><img
+                  class="angle-arrow"
+                  src="/img/angle-down-solid.svg"
+                  alt="angle-down"
+                /></span
+              >
+            </button>
+            <p>
+              Fácil, solo tienes que ingresar el nombre de tu localidad y
+              tendrás la previsión del tiempo en cuestión de segundos!
+            </p>
+          </div>
 
-      <div class="question">
-        <button>
-          <span>¿Cada cuánto se actualizan los datos del tiempo?</span>
-          <span
-            ><img class="angle-arrow"
-              src="./public/img/angle-down-solid.svg"
-              alt="angle-down"
-            /></span
-          >
-        </button>
-        <p>Actualizamos los datos a tiempo real</p>
-      </div>
+          <div class="question">
+            <button>
+              <span>¿Cada cuánto se actualizan los datos del tiempo?</span>
+              <span
+                ><img
+                  class="angle-arrow"
+                  src="/img/angle-down-solid.svg"
+                  alt="angle-down"
+                /></span
+              >
+            </button>
+            <p>Actualizamos los datos a tiempo real</p>
+          </div>
 
-      <div class="question">
-        <button>
-          <span>¿Qué tipo de preguntas puedo hacerle al chatbot?</span>
-          <span
-            ><img class="angle-arrow"
-              src="./public/img/angle-down-solid.svg"
-              alt="angle-down"
-            /></span
-          >
-        </button>
-        <p>Puedes hacerle todo tipo de preguntas relacionadas con el pronóstico del tiempo. Por ejemplo, ¿que temperatura hay en Málaga?</p>
-      </div>
+          <div class="question">
+            <button>
+              <span>¿Qué tipo de preguntas puedo hacerle al chatbot?</span>
+              <span
+                ><img
+                  class="angle-arrow"
+                  src="/img/angle-down-solid.svg"
+                  alt="angle-down"
+                /></span
+              >
+            </button>
+            <p>
+              Puedes hacerle todo tipo de preguntas relacionadas con el
+              pronóstico del tiempo. Por ejemplo, ¿que temperatura hay en
+              Málaga?
+            </p>
+          </div>
 
-      <div class="question">
-        <button>
-          <span>¿Qué diferencia tiene ser miembro?</span>
-          <span
-            ><img class="angle-arrow"
-              src="./public/img/angle-down-solid.svg"
-              alt="angle-down"
-            /></span
-          >
-        </button>
-        <p>Siendo miembro disfrutas de funcionalidades adicionales como el uso de mapa intectactivo o previsión de 5 días</p>
+          <div class="question">
+            <button>
+              <span>¿Qué diferencia tiene ser miembro?</span>
+              <span
+                ><img
+                  class="angle-arrow"
+                  src="/img/angle-down-solid.svg"
+                  alt="angle-down"
+                /></span
+              >
+            </button>
+            <p>
+              Siendo miembro disfrutas de funcionalidades adicionales como el
+              uso de mapa intectactivo o previsión de 5 días
+            </p>
+          </div>
         </div>
-        </section>
-        <div class="meeting"><img src="./public/img/meeting.webp" alt=""></div>
-      </div>
+        <div class="meeting"><img src="/img/meeting.webp" alt="" /></div>
+      </section>
+    </div>
   </div>
-</div>
 
-<style>
+  <style>
+    .meeting {
+      width: 500px;
+      height: 500px;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 15px;
+      position: relative;
+    }
 
-.meeting{
-    width: 500px;
-    height: 500px;
-    overflow: hidden;
-    object-fit: cover;
-    border-radius: 15px;
-    position: relative;  
-  }
+    .meeting img {
+      width: 100%;
+      height: 95%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
 
-.meeting img{
-    width: 100%;
-    height: 95%;
-    object-fit: cover;
-    border-radius: 15px;
-  }
+    .faq-container {
+      height: 960px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .faq-container {
-    height: 960px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    .margin-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      margin: 2rem 0;
+      justify-content: space-between;
+    }
 
-  .margin-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    margin: 2rem 0;
-    justify-content: space-between;
-  }
+    .faq {
+      width: 500px;
+    }
 
-  .faq{
-    width: 500px;
+    .faq-margin {
+      margin: 0px 20px 0px 20px;
+    }
 
-  }
+    .faq-title {
+      text-align: center;
+      margin: 2rem 0;
+      padding-top: 60px;
+      color: #2128bd;
+      font-size: 30px;
+      font-weight: 500;
+      font-family: "Bricolage Grotesque", sans-serif;
+    }
 
-  .faq-margin {
-    margin: 0px 20px 0px 20px;
-  }
+    .questions-container {
+      max-width: 800px;
+      margin: auto;
+    }
 
-  .faq-title {
-    text-align: center;
-    margin: 2rem 0;
-    padding-top: 60px;
-    color: #2128bd;
-    font-size: 30px;
-    font-weight: 500;
-    font-family: "Bricolage Grotesque", sans-serif;
-  }
+    .angle-arrow {
+      color: #fff;
+      width: 20px;
+    }
 
-  .questions-container {
-    max-width: 800px;
-    margin: auto;
-  }
+    .question button {
+      width: 100%;
+      background-color: #2128bd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 15px;
+      border-radius: 15px;
+      font-size: 22px;
+      font-family: Roboto, sans-serif;
+      font-weight: 600;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      outline: none;
+    }
+    .question p {
+      font-size: 22px;
+      font-family: Roboto, sans-serif;
+      font-weight: 600;
+      opacity: 0;
+      line-height: 1.5;
+      overflow: hidden;
+      transition: all 0.6s ease;
+    }
+    .angle-arrow {
+      transition: transform 0.5s ease-in;
+      color: #fff;
+    }
 
-.angle-arrow {
-   color: #fff;
-    width: 20px;
-  }
+    .question p.show {
+      max-height: 200px;
+      opacity: 1;
+      padding: 0px 15px 30px 15px;
+    }
+    .question button .d-arrow.rotate {
+      transform: rotate(180deg);
+    }
+  </style>
 
-  .question button {
-    width: 100%;
-    background-color: #2128bd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 15px;
-    border-radius: 15px;
-    font-size: 22px;
-    font-family: Roboto, sans-serif;
-    font-weight: 600;
-    font-weight: 700;
-    color: #fff;
-    cursor: pointer;
-     outline: none;
-    
-  }
-  .question p {
-    font-size: 22px;
-    font-family: Roboto, sans-serif;
-    font-weight: 600;
-    opacity: 0;
-    line-height: 1.5;
-    overflow: hidden;
-    transition: all 0.6s ease;
-  }
-  .angle-arrow {
-    transition: transform 0.5s ease-in;
-    color: #fff;
-  }
+  <script>
+    const buttons = document.querySelectorAll("button");
 
-  .question p.show{
-    max-height: 200px; 
-    opacity: 1;
-    padding:0px 15px 30px 15px;
-}
-.question button .d-arrow.rotate{
-    transform: rotate(180deg);
-}
-</style>
-
-<script>
-    const buttons = document.querySelectorAll('button');
-
-buttons.forEach( button =>{
-    button.addEventListener('click',()=>{
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
         const faq = button.nextElementSibling;
         const icon = button.children[1];
 
-        faq.classList.toggle('show');
-        icon.classList.toggle('rotate');
-    })
-} )
-</script>
+        faq.classList.toggle("show");
+        icon.classList.toggle("rotate");
+      });
+    });
+  </script>
+</div>

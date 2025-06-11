@@ -1,93 +1,88 @@
+---
+
+---
+
 <!-- menu -->
----
-
----
-
-  <div class="header">
-    <div class="logo-header">
-      <img src="./public/img/isotipo-blue.svg" alt="isotipo">
-    </div>
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="#home">Inicio</a></li>
-        <li><a href="#aboutUs">Quienes somos</a></li>
-        <li><a href="#services">Servicios</a></li>
-        <li><a class="button" href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
+<div class="header">
+  <div class="logo-header">
+    <img src="/img/isotipo-blue.svg" alt="isotipo" />
   </div>
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#aboutUs">Quienes somos</a></li>
+      <li><a href="#services">Servicios</a></li>
+      <li><a class="button" href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+</div>
 
-  <section id="home">
-  </section>
+<section id="home"></section>
 
 <style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    position: sticky;
+  }
+  a:visited {
+    color: #2b2b2b;
+  }
 
-.header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  position: sticky;
-}
-a:visited{
-  color: #2b2b2b;
-}
+  a:visited.button {
+    color: #fff;
+  }
 
-a:visited.button{
-  color: #fff;
-}
+  a,
+  li {
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    list-style: none;
+    color: #2b2b2b;
+  }
 
+  .logo-header img {
+    width: 60px;
+  }
 
-a, li{
-  font-family: Roboto, sans-serif;
-  font-weight: 600;
-  text-decoration: none;
-  list-style: none;
-  color: #2b2b2b;
-}
+  .nav-menu ul {
+    display: flex;
+    align-items: center;
+  }
 
-.logo-header img{
-  width: 60px;
-}
+  .nav-menu li {
+    margin-right: 1.5rem;
+  }
 
-.nav-menu ul{
-  display: flex;
-  align-items: center;
-}
+  .nav-menu a:hover {
+    color: #2128bd;
+  }
 
-.nav-menu li{
-  margin-right: 1.5rem;
-}
+  .button {
+    background-color: #2128bd;
+    border: 2px solid #2128bd;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+  }
 
-.nav-menu a:hover{
-  color: #2128bd;
-}
-
-.button{
-  background-color: #2128bd;
-  border: 2px solid #2128bd;
-  color: #fff;
-  padding: 0.25rem 0.75rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
-}
-
-.button:hover{
-  background: transparent;
-  border: 2px solid #2128bd;
-  color: #2128bd;
-  transition: 0.3s ease;
-}
-
+  .button:hover {
+    background: transparent;
+    border: 2px solid #2128bd;
+    color: #2128bd;
+    transition: 0.3s ease;
+  }
 </style>
 
 <script>
+  const home = document.getElementById("home") as HTMLElement;
 
-  const home = document.getElementById('home') as HTMLElement;
-
-home.addEventListener('click', () => {
-  console.log('Hizo click en Home');
-});
-
+  home.addEventListener("click", () => {
+    console.log("Hizo click en Home");
+  });
 </script>
