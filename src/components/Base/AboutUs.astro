@@ -7,6 +7,7 @@
   <p>Somos el grupo con más <span>estilo :)</span></p>
   <div class="AboutUs-container">
     <div class="About-Pablo">
+      <img class="pablo" src="/img/pablo.png" alt="Descripción" />
       <img src="/img/cloud-solid.svg" alt="cloud" />
       <p class="info-pablo">
         ¡Hola soy Pablo, programador frontend y amante de la tecnología!
@@ -93,6 +94,16 @@
       -webkit-transform: rotate(4deg);
       transform: rotate(4deg);
       box-shadow: 0 0 20px #fff;
+    }
+
+     & .pablo {
+      position: absolute;
+      width: 400px;
+      height: auto;
+      pointer-events: none;
+      top: 50px;
+      left: 10px;
+      object-fit: cover;
     }
   }
 
